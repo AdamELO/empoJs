@@ -16331,4 +16331,10 @@ body {
   padding: 0 !important;
 }
 
+@media (max-width: 992px) {
+  .centershopat {
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
