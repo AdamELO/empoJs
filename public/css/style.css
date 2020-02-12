@@ -16365,9 +16365,13 @@ hr {
 /*banner great products*/
 #productsbanner {
   background-image: url("../img/cta-bg.jpg");
-  background-position: cente;
+  background-position: center;
   height: 90vh;
   border: none;
+}
+
+.test {
+  border: solid 10px white;
 }
 
 @media (max-width: 992px) {
