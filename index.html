@@ -10,11 +10,11 @@
 
 <body>
     <!-- logo banner -->
-    <div class="d-flex">
+    <header class="d-flex">
         <div class="justify-content-center d-flex p-5 w-100">
             <h1>emporium.</h1>
         </div>
-    </div>
+    </header>
     <!-- end logo banner -->
 
     <!-- navbar -->
@@ -44,10 +44,13 @@
                     <a class="nav-link" href="#">contact</a>
                 </li>
                 <li class="nav-item mr-1 ml-2">
-                    <h3>&#11036;</h3>
-                </li>
-                <li class="nav-item ml-2 mr-3">
-                    <h3>&#11035;</h3>
+                    <div class="d-flex">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <h3>&#11036;</h3>
+                            <span>&nbsp;</span>
+                            <h3>&#11035;</h3>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <button class="btn bg-secondary text-white">connexion</button>
@@ -87,15 +90,15 @@
     <!-- services img -->
     <section class="container-fluid">
         <div class="text-white row">
-            <div id="livingroom" class="servicescards col-lg-4 col-sm-12 d-flex justify-content-center flex-column">
+            <div id="livingroom" class="servicescards borderwhite col-lg-4 col-sm-12 d-flex justify-content-center flex-column">
                 <h1 class="text-center">Living Room</h1>
                 <hr>
             </div>
-            <div id="saleitems" class="servicescards  col-lg-4 col-sm-12 d-flex justify-content-center flex-column">
+            <div id="saleitems" class="servicescards borderwhite col-lg-4 col-sm-12 d-flex justify-content-center flex-column">
                 <h1 class="text-center">Sale Items</h1>
                 <hr>
             </div>
-            <div id="clothes" class="servicescards  col-lg-4 col-sm-12 d-flex justify-content-center flex-column">
+            <div id="clothes" class="servicescards borderwhite col-lg-4 col-sm-12 d-flex justify-content-center flex-column">
                 <h1 class="text-center">Clothes</h1>
                 <hr>
             </div>
@@ -234,26 +237,26 @@
     <!-- learn more -->
     <section class="container-fluid">
         <div class="row mt-5">
-            <div class="col-lg-4 bg-gain test">
+            <div class="col-lg-4 bg-gain borderwhite">
                 <div class="d-flex justify-content-center align-items-center flex-column">
-                    <i class="fas fa-check-circle fa-2x mt-5"></i>
-                    <h4 class="text-uppercase mt-5">trusted by 10,000+ customers</h4>
+                    <i class="fas fa-check border border-dark p-2 rounded-circle mt-5"></i>
+                    <h4 class="text-uppercase mt-5 centershopat">trusted by 10,000+ customers</h4>
                     <p class="mt-5 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum dolorum a optio ab nemo nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab exercitationem ipsam quibusdam deleniti! Dicta, repellat?</p>
                     <button class="btn text-white bg-dark text-uppercase mt-3 mb-5">learn more</button>
                 </div>
             </div>
-            <div class="col-lg-4 bg-adam test">
+            <div class="col-lg-4 bg-adam borderwhite">
                 <div class="d-flex justify-content-center align-items-center flex-column text-white">
                     <i class="fas fa-paper-plane fa-2x  mt-5"></i>
-                    <h4 class="text-uppercase mt-5">very fast shipping</h4>
+                    <h4 class="text-uppercase mt-5 centershopat">very fast shipping</h4>
                     <p class="mt-5 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit eius, tempore porro eum odio. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam voluptatibus perferendis ratione provident, quod assumenda!</p>
                     <button class="btn text-dark bg-white text-uppercase mt-3 mb-5">learn more</button>
                 </div>
             </div>
-            <div class="col-lg-4 bg-gain test">
+            <div class="col-lg-4 bg-gain borderwhite">
                 <div class="d-flex justify-content-center align-items-center flex-column">
-                    <i class="fas fa-check-circle fa-2x  mt-5"></i>
-                    <h4 class="text-uppercase mt-5">trusted by 10,000+ customers</h4>
+                    <i class="fas fa-check border border-dark p-2 rounded-circle mt-5"></i>
+                    <h4 class="text-uppercase mt-5 centershopat">trusted by 10,000+ customers</h4>
                     <p class="mt-5 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatem hic voluptate fugiat similique! A! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ab minima porro iusto unde molestiae?</p>
                     <button class="btn text-white bg-dark text-uppercase mt-3 mb-5">learn more</button>
                 </div>
@@ -262,10 +265,57 @@
     </section>
     <!-- learn more end -->
 
-
-
-
-
+    <!-- footer -->
+    <footer>
+        <div class="bg-footer text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 d-flex align-items-center flex-column mt-5">
+                        <h4 class="mb-5">ABOUT US</h4>
+                        <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum natus rem quidem atque velit vero at neque illo mollitia! Porro?</p>
+                    </div>
+                    <div class="col-lg-4 d-flex align-items-center flex-column mt-5">
+                        <h4 class="mb-5">RECENTS POSTS</h4>
+                        <ul id="chevronsfooter">
+                            <li>Hello World</li>
+                            <li>Wonderful serenity has taken</li>
+                            <li>In my soul and absorb its power</li>
+                            <li>I hear the buzz of the little</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 d-flex centershopat flex-column mt-5">
+                        <h4 class="mb-5">TAG CLOUD</h4>
+                        <div>
+                            <div class="border btn border-secondary text-secondary mt-2">business</div>
+                            <div class="border btn border-secondary text-secondary mt-2">confidence</div>
+                            <div class="border btn border-secondary text-secondary mt-2">gadgets</div>
+                        </div>
+                        <div>
+                            <div class="border btn border-secondary text-secondary mt-2">identity</div>
+                            <div class="border btn border-secondary text-secondary mt-2">logo</div>
+                            <div class="border btn border-secondary text-secondary mt-2">photography</div>
+                        </div>
+                        <div>
+                            <div class="border btn border-secondary text-secondary mt-2">time</div>
+                            <div class="border btn border-secondary text-secondary mt-2">trips</div>
+                            <div class="border btn border-secondary text-secondary mt-2">works</div>
+                        </div>
+                        <div>
+                            <div class="border btn border-secondary text-secondary mt-2 mb-5">work space</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <div class="bg-black text-secondary text-uppercase p-4">
+            <h4 class="text-center">copyright 2020 goodlayers, all right reserve</h4>
+        </div>
+        <!-- end copyright -->
+    </footer>
+    <!-- end footer -->
+    
+    <!-- js scripts -->
     <script src="./public/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
