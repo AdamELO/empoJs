@@ -16517,9 +16517,16 @@ ul#chevronsfooter li::before {
   content: "> ";
 }
 
+/*tablets and phones*/
 @media (max-width: 992px) {
   .centershopat {
     text-align: center;
+  }
+}
+/*phones*/
+@media (max-width: 768px) {
+  #emporium h1 {
+    font-size: 20px;
   }
 }
 
