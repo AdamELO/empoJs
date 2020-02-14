@@ -71,3 +71,105 @@ function scrolled(){
   
 addEventListener("scroll", scrolled);
 
+// carousel
+// let span = document.getElementsByTagName("span")[2];
+// let span1 = document.getElementsByTagName("span")[3];
+// let span2 = document.getElementsByTagName("span")[4];
+// let span3= document.getElementsByTagName("span")[5];
+// span1.style.cursor="pointer";
+// span2.style.cursor="pointer";
+// span3.style.cursor="pointer";
+// span.style.cursor="pointer";
+
+
+// var carousel = document.getElementById("carrousel");
+
+// span1.addEventListener("click",()=>{
+//     span1.style.color="rgb(196,45,64)";
+//     carousel.style.transition="all 4s";
+//     carousel.style.transform="translateX(-25%)";
+//     document.getElementsByClassName("col-lg-3")[0].style.transition="all 1.5s";
+//     document.getElementsByClassName("col-lg-3")[0].style.opacity ="0";
+//     document.getElementsByClassName("col-lg-3")[4].style.opacity="0";
+//     setTimeout(() => {
+//         document.getElementsByClassName("col-lg-3")[0].style.display ="none";
+//         document.getElementsByClassName("col-lg-3")[4].style.display="block";
+//     }, 1500);
+//     setTimeout(() => {
+//         document.getElementsByClassName("col-lg-3")[4].style.transition="all 1.5s";
+//         document.getElementsByClassName("col-lg-3")[4].style.transform="translateX(-3%)";
+//     }, 2000);
+//     setTimeout(() => {
+//         carousel.style.transition="all 0s";
+//         carousel.style.transform="translateX(0%)";
+//         document.getElementsByClassName("col-lg-3")[4].style.transition="all 1.5s";
+//         document.getElementsByClassName("col-lg-3")[4].style.opacity="1";
+//     }, 2000);
+//     setTimeout(() => {
+//         document.getElementsByClassName("col-lg-3")[4].style.transform="translateX(0%)";
+//     }, 2000);
+// })
+
+
+// modal
+// modal click
+var modal = document.getElementById("myModal");
+var btn = document.getElementsByTagName("button")[3];
+var close = document.getElementsByClassName("close")[0];
+close.style.cursor="pointer";
+
+btn.onclick = function() {
+    modal.classList.remove("d-none");
+    modal.classList.add("d-flex");
+    body.style.overflowY="hidden";
+ 
+}
+
+close.onclick = function() {
+  modal.classList.add("d-none");
+  modal.classList.remove("d-flex");
+  body.style.overflowY="scroll";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.classList.add("d-none"); 
+    modal.classList.remove("d-flex");
+    body.style.overflowY="scroll";
+  }
+}
+
+// login signup
+document.getElementsByClassName("nav")[0].style.cursor="pointer";
+document.getElementsByClassName("nav")[1].style.cursor="pointer";
+
+document.getElementsByClassName("nav")[0].addEventListener("click",()=>{
+    document.getElementsByClassName("exo")[1].classList.add('d-none');
+    document.getElementsByClassName("exo")[0].classList.remove('d-none');
+    document.getElementsByClassName("handmodal")[1].classList.add('d-none');
+    document.getElementsByClassName("handmodal")[0].classList.remove('d-none');
+    document.getElementsByClassName("heremodal")[1].classList.add('d-none');
+    document.getElementsByClassName("heremodal")[0].classList.remove('d-none');
+})
+document.getElementsByClassName("nav")[1].addEventListener("click",()=>{
+    document.getElementsByClassName("exo")[0].classList.add('d-none');
+    document.getElementsByClassName("exo")[1].classList.remove('d-none');
+    document.getElementsByClassName("handmodal")[0].classList.add('d-none');
+    document.getElementsByClassName("handmodal")[1].classList.remove('d-none');
+    document.getElementsByClassName("heremodal")[0].classList.add('d-none');
+    document.getElementsByClassName("heremodal")[1].classList.remove('d-none');
+})
+
+let genreh = document.getElementsByClassName("genre")[0];
+let genref = document.getElementsByClassName("genre")[1];
+
+genreh.addEventListener("click",()=>{
+    if (genreh.checked==true &&genref.checked==true) {
+        genref.checked=false
+    }
+})
+genref.addEventListener("click",()=>{
+    if (genreh.checked==true &&genref.checked==true) {
+        genreh.checked=false
+    }
+})

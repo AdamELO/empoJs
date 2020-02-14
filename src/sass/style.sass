@@ -9,6 +9,8 @@ $police : Righteous
 body 
     margin: 0!important
     font-family: $police
+.vanish
+    display: none
 .borderwhite
     border: solid 10px white
 button
@@ -37,12 +39,32 @@ hr
     background-position: center
     height: 90vh
     border: none
-// footer li
+/* footer li*/
 ul#chevronsfooter
     li 
         list-style: none
         &::before
             content: "\003e  "
+// modal
+.modal
+    z-index: 1
+    background-color: rgba(0, 0, 0, 0.4)
+.modal-content
+    background-color: #fefefe
+    margin: auto
+    width: 80%
+
+.handmodal
+    animation: pointmodal 1s infinite 
+
+@keyframes pointmodal
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(25%)
+    100%
+        transform: translateY(0)
+
 /*tablets and phones*/
 @media (max-width:992px)
     .centershopat
