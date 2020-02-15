@@ -9,8 +9,8 @@ $police : Righteous
 body 
     margin: 0!important
     font-family: $police
-.vanish
-    display: none
+.cursor
+    cursor: pointer
 .borderwhite
     border: solid 10px white
 button
@@ -39,13 +39,24 @@ hr
     background-position: center
     height: 90vh
     border: none
+/*carousel*/
+#slider
+    width: 71%
+    #slides
+        overflow-y: hidden
+        div
+            flex-shrink: 0
+            width: 300px
+            transition: transform 5s
+#slides::-webkit-scrollbar
+    display: none
 /* footer li*/
 ul#chevronsfooter
     li 
         list-style: none
         &::before
             content: "\003e  "
-// modal
+/*modal*/
 .modal
     z-index: 1
     background-color: rgba(0, 0, 0, 0.4)
@@ -53,7 +64,6 @@ ul#chevronsfooter
     background-color: #fefefe
     margin: auto
     width: 80%
-
 .handmodal
     animation: pointmodal 1s infinite 
 
@@ -69,6 +79,10 @@ ul#chevronsfooter
 @media (max-width:992px)
     .centershopat
         text-align: center
+    #scrollingCarousel
+        display: none
+    #scrollingCarousel + div
+        display: block!important
 /*phones*/
 @media (max-width:768px)
     #emporium

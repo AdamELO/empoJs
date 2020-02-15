@@ -16464,8 +16464,8 @@ body {
   font-family: Righteous;
 }
 
-.vanish {
-  display: none;
+.cursor {
+  cursor: pointer;
 }
 
 .borderwhite {
@@ -16514,6 +16514,23 @@ hr {
   border: none;
 }
 
+/*carousel*/
+#slider {
+  width: 71%;
+}
+#slider #slides {
+  overflow-y: hidden;
+}
+#slider #slides div {
+  flex-shrink: 0;
+  width: 300px;
+  transition: transform 5s;
+}
+
+#slides::-webkit-scrollbar {
+  display: none;
+}
+
 /* footer li*/
 ul#chevronsfooter li {
   list-style: none;
@@ -16522,6 +16539,7 @@ ul#chevronsfooter li::before {
   content: "> ";
 }
 
+/*modal*/
 .modal {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
@@ -16552,6 +16570,14 @@ ul#chevronsfooter li::before {
 @media (max-width: 992px) {
   .centershopat {
     text-align: center;
+  }
+
+  #scrollingCarousel {
+    display: none;
+  }
+
+  #scrollingCarousel + div {
+    display: block !important;
   }
 }
 /*phones*/
