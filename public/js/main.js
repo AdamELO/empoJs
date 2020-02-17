@@ -22,6 +22,7 @@ white.addEventListener("click", () => {
     }
     nav.classList.remove("bg-black");
     nav.classList.add("bg-white");
+    document.getElementById("scrollgsm").style.color = "black";
 })
 black.addEventListener("click", () => {
     body.style.backgroundColor = "black";
@@ -41,6 +42,7 @@ black.addEventListener("click", () => {
     }
     nav.classList.remove("bg-white");
     nav.classList.add("bg-black");
+    document.getElementById("scrollgsm").style.color = "white";
 })
 
 // scroll fixed navabar
