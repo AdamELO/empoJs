@@ -16566,6 +16566,20 @@ ul#chevronsfooter li::before {
     transform: translateY(0);
   }
 }
+.bonusrecentproducts {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.bonusrightrecentproducts {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
 /*tablets and phones*/
 @media (max-width: 992px) {
   .centershopat {

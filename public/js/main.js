@@ -65,105 +65,57 @@ function scrolled() {
 addEventListener("scroll", scrolled);
 
 // carousel
-let btn1 = document.getElementsByClassName("cursor")[0];
-let btn2 = document.getElementsByClassName("cursor")[1];
-let btn3 = document.getElementsByClassName("cursor")[2];
-let btn4 = document.getElementsByClassName("cursor")[3];
 let z = 0
-btn1.addEventListener("click", () => {
+
+let carousel = function (btn, translate) {
+    document.getElementsByClassName("cursor")[btn];
     for (let i = 0; i < 4; i++) {
         document.getElementsByClassName("cursor")[i].classList.remove("bg-adam");
-        btn1.classList.add("bg-adam")
+        document.getElementsByClassName("cursor")[btn].classList.add("bg-adam")
     }
-    z++
-    for (let i = 0; i < 8; i++) {
-        document.querySelectorAll("#slides > div")[i].style.transform = "translateX(-115%)";
-    }
-    if (z > 1 && z % 2 == 0) {
+    if (btn == 0) {
+        z++
         for (let i = 0; i < 8; i++) {
-            document.querySelectorAll("#slides > div")[i].style.transform = "translateX(0%)";
+            document.querySelectorAll("#slides > div")[i].style.transform = `translateX(${translate}%)`;
+        }
+        if (z > 1 && z % 2 == 0) {
+            for (let i = 0; i < 8; i++) {
+                document.querySelectorAll("#slides > div")[i].style.transform = "translateX(0%)";
+            }
+        }
+    } else {
+        z = 1
+        for (let i = 0; i < 8; i++) {
+            document.querySelectorAll("#slides > div")[i].style.transform = `translateX(${translate}%)`;
         }
     }
-})
-btn2.addEventListener("click", () => {
-    for (let i = 0; i < 4; i++) {
-        document.getElementsByClassName("cursor")[i].classList.remove("bg-adam");
-        btn2.classList.add("bg-adam")
-    }
-    z = 1
-    for (let i = 0; i < 8; i++) {
-        document.querySelectorAll("#slides > div")[i].style.transform = "translateX(-230%)";
-    }
-})
-btn3.addEventListener("click", () => {
-    for (let i = 0; i < 4; i++) {
-        document.getElementsByClassName("cursor")[i].classList.remove("bg-adam");
-        btn3.classList.add("bg-adam")
-    }
-    z = 1
-    for (let i = 0; i < 8; i++) {
-        document.querySelectorAll("#slides > div")[i].style.transform = "translateX(-343%)";
-    }
-})
-btn4.addEventListener("click", () => {
-    for (let i = 0; i < 4; i++) {
-        document.getElementsByClassName("cursor")[i].classList.remove("bg-adam");
-        btn4.classList.add("bg-adam")
-    }
-    z = 1
-    for (let i = 0; i < 8; i++) {
-        document.querySelectorAll("#slides > div")[i].style.transform = "translateX(-462%)";
-    }
-})
+}
+
+// bonus carousel auto
 setInterval(() => {
     setTimeout(() => {
-        for (let i = 0; i < 4; i++) {
-            document.getElementsByClassName("cursor")[i].classList.remove("bg-adam");
-            btn1.classList.add("bg-adam")
-        }
+        document.getElementsByClassName("cursor")[0].classList.add("bg-adam")
         for (let i = 0; i < 8; i++) {
             document.querySelectorAll("#slides > div")[i].style.transform = "translateX(-115%)";
         }
     }, 10000);
     setTimeout(() => {
-        for (let i = 0; i < 4; i++) {
-            document.getElementsByClassName("cursor")[i].classList.remove("bg-adam");
-            btn2.classList.add("bg-adam")
-        }
-        for (let i = 0; i < 8; i++) {
-            document.querySelectorAll("#slides > div")[i].style.transform = "translateX(-230%)";
-        }
+        setTimeout(() => {
+            carousel(1, -230)
+        }, 5000);
     }, 20000);
     setTimeout(() => {
-        for (let i = 0; i < 4; i++) {
-            document.getElementsByClassName("cursor")[i].classList.remove("bg-adam");
-            btn3.classList.add("bg-adam")
-        }
-        for (let i = 0; i < 8; i++) {
-            document.querySelectorAll("#slides > div")[i].style.transform = "translateX(-343%)";
-        }
+        carousel(2, -343)
     }, 30000);
     setTimeout(() => {
-        for (let i = 0; i < 4; i++) {
-            document.getElementsByClassName("cursor")[i].classList.remove("bg-adam");
-            btn4.classList.add("bg-adam")
-        }
-        for (let i = 0; i < 8; i++) {
-            document.querySelectorAll("#slides > div")[i].style.transform = "translateX(-462%)";
-        }
+        carousel(3, -462)
     }, 40000);
     setTimeout(() => {
-        for (let i = 0; i < 4; i++) {
-            document.getElementsByClassName("cursor")[i].classList.remove("bg-adam");
-            btn1.classList.add("bg-adam")
-        }
-        for (let i = 0; i < 8; i++) {
-            document.querySelectorAll("#slides > div")[i].style.transform = "translateX(0%)";
-        }
+        carousel(0, -115)
     }, 50000);
-}, 50000);
+}, 40000);
 
-// modal
+// modal//
 
 // modal click
 var modal = document.getElementById("myModal");
@@ -193,23 +145,16 @@ window.onclick = function (event) {
 }
 
 // login signup
-document.getElementsByClassName("nav")[0].addEventListener("click", () => {
-    document.getElementsByClassName("exo")[1].classList.add('d-none');
-    document.getElementsByClassName("exo")[0].classList.remove('d-none');
-    document.getElementsByClassName("handmodal")[1].classList.add('d-none');
-    document.getElementsByClassName("handmodal")[0].classList.remove('d-none');
-    document.getElementsByClassName("heremodal")[1].classList.add('d-none');
-    document.getElementsByClassName("heremodal")[0].classList.remove('d-none');
-})
-document.getElementsByClassName("nav")[1].addEventListener("click", () => {
-    document.getElementsByClassName("exo")[0].classList.add('d-none');
-    document.getElementsByClassName("exo")[1].classList.remove('d-none');
-    document.getElementsByClassName("handmodal")[0].classList.add('d-none');
-    document.getElementsByClassName("handmodal")[1].classList.remove('d-none');
-    document.getElementsByClassName("heremodal")[0].classList.add('d-none');
-    document.getElementsByClassName("heremodal")[1].classList.remove('d-none');
-})
+let loginsignup = function (num, index) {
+    document.getElementsByClassName("exo")[index].classList.add('d-none');
+    document.getElementsByClassName("exo")[num].classList.remove('d-none');
+    document.getElementsByClassName("handmodal")[index].classList.add('d-none');
+    document.getElementsByClassName("handmodal")[num].classList.remove('d-none');
+    document.getElementsByClassName("heremodal")[index].classList.add('d-none');
+    document.getElementsByClassName("heremodal")[num].classList.remove('d-none');
+}
 
+// bonus modal genre
 let genreh = document.getElementsByClassName("genre")[0];
 let genref = document.getElementsByClassName("genre")[1];
 
@@ -222,4 +167,28 @@ genref.addEventListener("click", () => {
     if (genreh.checked == true && genref.checked == true) {
         genreh.checked = false
     }
+})
+
+// bonus hover recent products
+let bonushover = function (number) {
+    document.getElementsByClassName("bonusrecentproducts")[number].style.opacity = "1";
+    document.getElementsByClassName("bonusrightrecentproducts")[number].style.opacity = "1";
+}
+let bonushoverout = function (number) {
+    document.getElementsByClassName("bonusrecentproducts")[number].style.opacity = "0";
+    document.getElementsByClassName("bonusrightrecentproducts")[number].style.opacity = "0";
+}
+
+// bonus speechsynthesisuterrence
+var synth = window.speechSynthesis;
+document.getElementsByTagName("h1")[0].addEventListener("mouseover", () => {
+    var toSpeak = new SpeechSynthesisUtterance("Emporium");
+    toSpeak.lang = "en-GB";
+    synth.speak(toSpeak);
+})
+
+document.getElementsByTagName("h1")[1].addEventListener("mouseover", () => {
+    var toSpeak = new SpeechSynthesisUtterance("Emporium");
+    toSpeak.lang = "en-GB";
+    synth.speak(toSpeak);
 })
